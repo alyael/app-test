@@ -1,0 +1,54 @@
+{
+    "name": "alyael/app-test",
+    "description": "test",
+    "keywords": [
+        "alyael",
+        "app-test"
+    ],
+    "homepage": "https://github.com/alyael/app-test",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Carlos Alberto Ramirez",
+            "email": "ramirez.alfonso.ca@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alyael\\AppTest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alyael\\AppTest\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alyael\\AppTest\\AppTestServiceProvider"
+            ],
+            "aliases": {
+                "AppTest": "Alyael\\AppTest\\AppTestFacade"
+            }
+        }
+    }
+}
